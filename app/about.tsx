@@ -1,10 +1,13 @@
+import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
-export default function App() {
+export default function About() {
+  const goBack = () => router.back();
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>This is About.tsx</Text>
+      <Button title="Go back" onPress={goBack} />
       <StatusBar style="auto" />
     </View>
   );
